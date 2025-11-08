@@ -1,0 +1,27 @@
+{
+  "name": "playwright_webautomation",
+  "version": "1.0.0",
+  "description": "Webautomation script using Playwright in typescript - page navigation, product identification, addtocart",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lekshmykm/playwright_webautomation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lekshmykm/playwright_webautomation/issues"
+  },
+  "homepage": "https://github.com/lekshmykm/playwright_webautomation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
