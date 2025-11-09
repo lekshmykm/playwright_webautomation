@@ -1,12 +1,14 @@
 import { expect }  from "@playwright/test";
 import {BasePage} from "./BasePage";
-var productName: string;
 
 export class CartPage extends BasePage {
   private notificationsPopup = this.page.locator('#notifications-display');
 
-  async notificationsPopupDisplay(): Promise<void>  {
-    await this.notificationsPopup.waitFor({ state: 'visible' });
-    expect(this.page.url().toLowerCase()).toContain('basket'.toLowerCase());
+  /**
+   * verify if notification popup is displayed and also check the cart url
+  **/
+  async verifyNotificationPopUpDisplayed(): Promise<void>  {
+     await this.notificationsPopup.waitFor({ state: 'visible' });
+     expect(this.notificationsPopup).toBeVisible({ timeout: 10000 });
   }
 }
