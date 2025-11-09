@@ -9,7 +9,7 @@ export default defineConfig({
   timeout: 30_000,
   expect: { timeout: 5000 },
   // Reporter to use
-  reporter: 'html',
+  reporter: 'allure-playwright',
   use: {
     baseURL: process.env['BASE_URL'] || 'https://www.thomann.de/intl/index.html',
     headless: true,

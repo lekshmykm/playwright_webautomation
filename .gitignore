@@ -7,3 +7,5 @@ test-results/
 coverage/
 .env
 playwright-report/
+allure-results/
+allure-report/
