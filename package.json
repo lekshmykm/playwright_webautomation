@@ -4,7 +4,9 @@
   "description": "Webautomation script using Playwright in typescript - page navigation, product identification, addtocart",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx playwright test --reporter=html",
+    "test:headed": "npx playwright test --headed",
+    "report": "npx playwright show-report"
   },
   "repository": {
     "type": "git",
@@ -13,7 +15,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/lekshmykm/playwright_webautomation/issues"
   },
@@ -23,5 +25,8 @@
     "@types/node": "^24.10.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }

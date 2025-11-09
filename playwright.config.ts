@@ -1,16 +1,19 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as dotenv from 'dotenv';
 
+dotenv.config();
 export default defineConfig({
-  testDir: './tests',
+  testDir: './src/tests',
   fullyParallel: true,
-  retries: 1,
+  retries: 0,
   timeout: 30_000,
   expect: { timeout: 5000 },
   // Reporter to use
   reporter: 'html',
   use: {
-    baseURL: 'https://www.thomann.de/intl/cableguy.html',
+    baseURL: process.env['BASE_URL'] || 'https://www.thomann.de/intl/index.html',
     headless: true,
+    viewport: { width: 1920, height: 1080 },
     ignoreHTTPSErrors: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure', 
